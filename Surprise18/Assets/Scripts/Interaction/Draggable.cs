@@ -32,7 +32,6 @@ public class Draggable : MonoBehaviour
 	private const int IDX_SNAP = 1;
 
 	private Ray currentRay;
-	private bool eventDirty = false;
 
 
 	private void OnEnable()
@@ -169,7 +168,6 @@ public class Draggable : MonoBehaviour
 		if (this.activeConstraints != null)
 		{
 			this.activeConstraints[constraint] = other;
-			this.eventDirty = true;
 		}
 	}
 
