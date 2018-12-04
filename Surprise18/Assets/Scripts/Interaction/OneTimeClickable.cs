@@ -9,6 +9,9 @@ public class OneTimeClickable : MonoBehaviour
 	[SerializeField]
 	private UnityEngine.Events.UnityEvent OnTrigger;
 
+	[SerializeField]
+	private bool singleUse = true;
+
 	private Clickable clickable;
 	private bool triggered = false;
 
@@ -21,7 +24,7 @@ public class OneTimeClickable : MonoBehaviour
 
 	private void Clickable_Click(Clickable sender, UnityEngine.EventSystems.PointerEventData e)
 	{
-		if (!this.triggered)
+		if (!(this.singleUse && this.triggered))
 		{
 			this.triggered = true;
 			if (OnTrigger != null)
