@@ -9,7 +9,7 @@ public class PathDraggable : MonoBehaviour
 	public delegate void PathDragEvent(PathDraggable sender, float percentage);
 	public event PathDragEvent OnArrive;
 	public event PathDragEvent OnDragPercentage;
-	public event PathDragEvent AbortDragging;
+	public event PathDragEvent StopDragging;
 
 
 	[SerializeField]
@@ -104,17 +104,16 @@ public class PathDraggable : MonoBehaviour
 			if (OnArrive != null)
 				OnArrive.Invoke(this, 1f);
 		}
-		else
-		{
-			if (AbortDragging != null)
-				AbortDragging.Invoke(this, GetPathPercentage(this.pathStart.position, this.pathEnd.position, this.closestPoint));
-		}
+
+		if (StopDragging != null)
+			StopDragging.Invoke(this, GetPathPercentage(this.pathStart.position, this.pathEnd.position, this.closestPoint));
+
 	}
 
 
 	private static float GetPathPercentage(Vector3 start, Vector3 end, Vector3 point)
 	{
-		return Vector3.Dot(point - start, end - start);
+		return (point - start).magnitude / (end - start).magnitude;
 	}
 
 	private static bool IsPointWithinLine(Vector3 start, Vector3 end, Vector3 point)

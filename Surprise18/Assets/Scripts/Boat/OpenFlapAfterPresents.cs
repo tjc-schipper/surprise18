@@ -8,6 +8,9 @@ public class OpenFlapAfterPresents : MonoBehaviour
 	[SerializeField]
 	PresentStack[] presents;
 
+	[SerializeField]
+	private OneTimeClickable screwClickable;
+
 	private Animator animator;
 	private int presentCounter;
 	private int numPresents;
@@ -23,6 +26,8 @@ public class OpenFlapAfterPresents : MonoBehaviour
 		{
 			stack.OnExploded += HandlePresent;
 		}
+
+		this.screwClickable.enabled = false;
 	}
 
 
@@ -38,6 +43,10 @@ public class OpenFlapAfterPresents : MonoBehaviour
 	void Open()
 	{
 		this.animator.SetBool("b_Open", true);
+		DG.Tweening.DOVirtual.DelayedCall(5f, () =>
+		{
+			this.screwClickable.enabled = true;
+		});
 	}
 
 }
