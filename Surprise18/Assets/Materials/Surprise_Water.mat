@@ -37,7 +37,7 @@ Material:
     m_Floats:
     - _Float0: 0
     - _Speed: 0.02
-    - _WaveHeight: 0.226
+    - _WaveHeight: 0.156
     - __dirty: 0
     m_Colors:
     - _Color0: {r: 0.32084376, g: 0.6239977, b: 0.6603774, a: 1}

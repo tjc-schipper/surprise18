@@ -24,7 +24,9 @@ public class PresentStack : MonoBehaviour
 		Rigidbody[] rbs = GetComponentsInChildren<Rigidbody>();
 		foreach (Rigidbody r in rbs)
 		{
+			r.isKinematic = false;
 			r.AddExplosionForce(this.explosionForce, this.explosionPoint.position, this.explosionRadius);
+			r.AddForce(Vector3.up * 1f, ForceMode.Impulse);
 		}
 
 		DOVirtual.DelayedCall(4f, () =>
@@ -35,10 +37,7 @@ public class PresentStack : MonoBehaviour
 			}
 		});
 
-		DOVirtual.DelayedCall(1.5f, () =>
-		{
-			if (this.OnExploded != null)
-				this.OnExploded.Invoke();
-		});
+		if (this.OnExploded != null)
+			this.OnExploded.Invoke();
 	}
 }

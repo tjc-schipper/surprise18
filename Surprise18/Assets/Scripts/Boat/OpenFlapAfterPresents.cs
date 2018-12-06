@@ -11,6 +11,9 @@ public class OpenFlapAfterPresents : MonoBehaviour
 	[SerializeField]
 	private OneTimeClickable screwClickable;
 
+	[SerializeField]
+	BoatAnimations boatAnimations;
+
 	private Animator animator;
 	private int presentCounter;
 	private int numPresents;
@@ -33,6 +36,7 @@ public class OpenFlapAfterPresents : MonoBehaviour
 
 	void HandlePresent()
 	{
+		this.boatAnimations.PresentStackRemoved();
 		this.presentCounter++;
 		if (this.presentCounter == this.numPresents)
 		{
@@ -43,7 +47,7 @@ public class OpenFlapAfterPresents : MonoBehaviour
 	void Open()
 	{
 		this.animator.SetBool("b_Open", true);
-		DG.Tweening.DOVirtual.DelayedCall(5f, () =>
+		DG.Tweening.DOVirtual.DelayedCall(2.5f, () =>
 		{
 			this.screwClickable.enabled = true;
 		});

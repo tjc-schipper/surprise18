@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 [RequireComponent(typeof(AudioSource))]
 public class TootPuzzle : MonoBehaviour
@@ -81,5 +82,12 @@ public class TootPuzzle : MonoBehaviour
 	{
 		this.openCap.DoOpen();
 		this.enabled = false;
+		DOVirtual.DelayedCall(2.5f, () =>
+		{
+			foreach (AudioClip clip in this.audioClips)
+			{
+				AudioSource.PlayClipAtPoint(clip, this.transform.position, 1.0f);
+			}
+		});
 	}
 }
