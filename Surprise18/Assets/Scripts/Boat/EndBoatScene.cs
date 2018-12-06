@@ -48,6 +48,7 @@ public class EndBoatScene : MonoBehaviour
 			{
 				// TODO: Transition to next scene!
 				Debug.Log("LOAD NEW SCENE!");
+				UnityEngine.SceneManagement.SceneManager.LoadScene(1);
 			});
 		go.transform.DORotateQuaternion(this.endLocation.rotation, this.duration)
 			.SetEase(Ease.InOutQuad);

@@ -12,7 +12,7 @@ public class RotationPuzzle : MonoBehaviour
 	float angleThreshold = 5f;
 
 	[SerializeField]
-	OpenCap openCap;
+	TootPuzzle tootPuzzle;
 
 
 	// Use this for initialization
@@ -49,6 +49,6 @@ public class RotationPuzzle : MonoBehaviour
 
 		//TODO: Trigger something. Like the buttons coming out the side?
 		Debug.Log("WE DONE HERE!");
-		this.openCap.DoOpen();
+		this.tootPuzzle.enabled = true;
 	}
 }

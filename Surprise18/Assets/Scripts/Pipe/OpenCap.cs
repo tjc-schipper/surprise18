@@ -12,6 +12,9 @@ public class OpenCap : MonoBehaviour
 	[SerializeField]
 	ParticleSystem smallParticles;
 
+	[SerializeField]
+	GameObject hiddenPresent;
+
 
 	private Animator animator;
 
@@ -20,6 +23,7 @@ public class OpenCap : MonoBehaviour
 	void Start()
 	{
 		this.animator = GetComponent<Animator>();
+		this.hiddenPresent.SetActive(false);
 	}
 
 
@@ -38,6 +42,7 @@ public class OpenCap : MonoBehaviour
 		DG.Tweening.DOVirtual.DelayedCall(2.5f, () =>
 		{
 			this.bigParticles.Play();
+			this.hiddenPresent.SetActive(true);
 		});
 	}
 }
