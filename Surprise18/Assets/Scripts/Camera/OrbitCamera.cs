@@ -37,8 +37,8 @@ public class OrbitCamera : MonoBehaviour
 
         Vector3 pivotToCam = this.transform.position - this.pivotPoint.position;
 
-        this.angleX = Mathf.Asin(pivotToCam.y) * Mathf.Rad2Deg;
-        this.angleY = Mathf.Asin(pivotToCam.x) * Mathf.Rad2Deg;
+        /*this.angleX = Mathf.Asin(pivotToCam.y) * Mathf.Rad2Deg;
+        this.angleY = Mathf.Asin(pivotToCam.x) * Mathf.Rad2Deg;*/
     }
 
     void OnDisable()
