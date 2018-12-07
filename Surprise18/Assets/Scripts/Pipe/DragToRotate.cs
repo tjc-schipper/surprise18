@@ -10,6 +10,10 @@ public class DragToRotate : MonoBehaviour
 
 
 	[SerializeField]
+	AudioSource audio_Rotate;
+
+
+	[SerializeField]
 	Clickable clickable;
 
 	[SerializeField]
@@ -57,6 +61,8 @@ public class DragToRotate : MonoBehaviour
 			float direction = Mathf.Sign(Vector3.Dot(Camera.main.transform.forward, -this.targetOrientation.right));    // If looking from backside, invert rotation!
 			this.lastY = y;
 
+			this.audio_Rotate.volume = Mathf.Lerp(0f, 1f, Mathf.Abs(dy) / 10f);
+
 			this.angle += dy * sensitivity * direction;
 			this.model.rotation = Quaternion.Euler(0f, 0f, this.angle) * this.targetOrientation.rotation;
 		}
@@ -68,11 +74,13 @@ public class DragToRotate : MonoBehaviour
 		this.dragging = true;
 		this.lastY = Input.mousePosition.y;
 		this.angle = Quaternion.Angle(this.model.rotation, this.targetOrientation.rotation);
+		this.audio_Rotate.Play();
 	}
 
 	private void Clickable_MouseUp(Clickable sender, UnityEngine.EventSystems.PointerEventData e)
 	{
 		this.dragging = false;
+		this.audio_Rotate.Stop();
 		if (this.StopDragging != null)
 			this.StopDragging.Invoke(this, this.angle);
 	}

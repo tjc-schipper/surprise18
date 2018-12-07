@@ -6,6 +6,13 @@ public class OpenFlapAfterPresents : MonoBehaviour
 {
 
 	[SerializeField]
+	AudioClip clip_Squeak;
+
+	[SerializeField]
+	AudioClip clip_Bang;
+
+
+	[SerializeField]
 	PresentStack[] presents;
 
 	[SerializeField]
@@ -47,8 +54,10 @@ public class OpenFlapAfterPresents : MonoBehaviour
 	void Open()
 	{
 		this.animator.SetBool("b_Open", true);
+		AudioSource.PlayClipAtPoint(this.clip_Squeak, Camera.main.transform.position, 1f);
 		DG.Tweening.DOVirtual.DelayedCall(2.5f, () =>
 		{
+			AudioSource.PlayClipAtPoint(this.clip_Bang, Camera.main.transform.position, 1f);
 			this.screwClickable.enabled = true;
 		});
 	}

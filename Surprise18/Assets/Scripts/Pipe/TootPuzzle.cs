@@ -86,7 +86,7 @@ public class TootPuzzle : MonoBehaviour
 		{
 			foreach (AudioClip clip in this.audioClips)
 			{
-				AudioSource.PlayClipAtPoint(clip, this.transform.position, 1.0f);
+				AudioSource.PlayClipAtPoint(clip, Camera.main.transform.position, 1.0f);
 			}
 		});
 	}

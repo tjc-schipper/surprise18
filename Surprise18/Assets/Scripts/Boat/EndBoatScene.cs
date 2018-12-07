@@ -8,6 +8,9 @@ public class EndBoatScene : MonoBehaviour
 {
 
 	[SerializeField]
+	AudioClip clip_Secret;
+
+	[SerializeField]
 	float triggerPercentage = 0.85f;
 
 	[SerializeField]
@@ -40,6 +43,8 @@ public class EndBoatScene : MonoBehaviour
 
 	private void End()
 	{
+		AudioSource.PlayClipAtPoint(this.clip_Secret, Camera.main.transform.position, 1f);
+		
 		// Move pipe to endLocation
 		GameObject go = this.draggablePipe.gameObject;
 		go.transform.DOMove(endLocation.position, this.duration)

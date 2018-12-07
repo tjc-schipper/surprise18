@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 2100000, guid: 4f81632448926474ba5b8f6ff61f5ff1, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 170076734}
-  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.5748172, a: 1}
+  m_IndirectSpecularColor: {r: 0.41468233, g: 0.58814514, b: 0.67484397, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -175,6 +175,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0103e62df399a5a4d992c2ceee53c760, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  clip_Jiggle: {fileID: 8300000, guid: 8ea1463c61505d44db6c6bc657f89c14, type: 3}
   clickable: {fileID: 587248771}
 --- !u!4 &149745853 stripped
 Transform:
@@ -512,6 +513,11 @@ Prefab:
       propertyPath: m_IsKinematic
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114179045680735302, guid: 6ff486d9b12586046a317b3bc5faaaa1,
+        type: 2}
+      propertyPath: clip_Explode
+      value: 
+      objectReference: {fileID: 8300000, guid: b666ebcd3c7535449abb116b0bc5f5ef, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6ff486d9b12586046a317b3bc5faaaa1, type: 2}
   m_IsPrefabAsset: 0
@@ -659,6 +665,130 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 1220595216}
   m_Script: {fileID: 11500000, guid: 2e78718907a39904d86684176b086a37, type: 3}
+--- !u!1 &411671978
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 411671980}
+  - component: {fileID: 411671979}
+  m_Layer: 0
+  m_Name: Waves Sound
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!82 &411671979
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 411671978}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 79fa3636d7611b3478e79bf33b8d77ca, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.65
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!4 &411671980
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 411671978}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &447087165 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 114179045680735302, guid: 6ff486d9b12586046a317b3bc5faaaa1,
@@ -777,6 +907,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ae19cc80c1608b4a8f52711be2884c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  clip_Pipefall: {fileID: 8300000, guid: 9f8bea6e074784f4f9282e6178c0f0b0, type: 3}
+  clip_PipeJiggle: {fileID: 8300000, guid: 9b7ebfe059ab86c4798516ddfef0d3a9, type: 3}
   draggablePipe: {fileID: 1622431765}
   placeholderPipe: {fileID: 1955523019}
 --- !u!1 &532405040
@@ -1125,6 +1257,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd37f55902b365642b935f2ae50aaa84, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  clip_Screw: {fileID: 8300000, guid: ffbf270a5e816ef408e6102761c6bee3, type: 3}
   OnScrewUndone:
     m_PersistentCalls:
       m_Calls:
@@ -1202,6 +1335,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fb01df7fffeba30449630bf428af3e0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  clip_Squeak: {fileID: 8300000, guid: 19f08c92901e625429672460ada82481, type: 3}
+  clip_Bang: {fileID: 8300000, guid: 4098e3a0eefcc7e4a8ab7c02d77b250e, type: 3}
   presents:
   - {fileID: 447087165}
   - {fileID: 330173975}
@@ -1503,6 +1638,11 @@ Prefab:
       propertyPath: m_IsKinematic
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114179045680735302, guid: 6ff486d9b12586046a317b3bc5faaaa1,
+        type: 2}
+      propertyPath: clip_Explode
+      value: 
+      objectReference: {fileID: 8300000, guid: b666ebcd3c7535449abb116b0bc5f5ef, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6ff486d9b12586046a317b3bc5faaaa1, type: 2}
   m_IsPrefabAsset: 0
@@ -1601,6 +1741,11 @@ Prefab:
       propertyPath: m_IsKinematic
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114179045680735302, guid: 6ff486d9b12586046a317b3bc5faaaa1,
+        type: 2}
+      propertyPath: clip_Explode
+      value: 
+      objectReference: {fileID: 8300000, guid: b666ebcd3c7535449abb116b0bc5f5ef, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6ff486d9b12586046a317b3bc5faaaa1, type: 2}
   m_IsPrefabAsset: 0
@@ -1760,6 +1905,11 @@ Prefab:
       propertyPath: m_IsKinematic
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114179045680735302, guid: 6ff486d9b12586046a317b3bc5faaaa1,
+        type: 2}
+      propertyPath: clip_Explode
+      value: 
+      objectReference: {fileID: 8300000, guid: b666ebcd3c7535449abb116b0bc5f5ef, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6ff486d9b12586046a317b3bc5faaaa1, type: 2}
   m_IsPrefabAsset: 0
@@ -2003,6 +2153,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1456676bc3877a4429a18fdd1c425521, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  clip_Secret: {fileID: 8300000, guid: 09705c22fabb49849aa3cfe385d25a34, type: 3}
   triggerPercentage: 0.85
   endLocation: {fileID: 649561722}
   duration: 2
@@ -2165,6 +2316,10 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -9.428
       objectReference: {fileID: 0}
+    - target: {fileID: 2300000, guid: 21e8a779cacc49643bfc8438c9a27f0d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f0d9173da6253c440bd3d3c62c3cad1d, type: 2}
     m_RemovedComponents:
     - {fileID: 9500000, guid: 21e8a779cacc49643bfc8438c9a27f0d, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 21e8a779cacc49643bfc8438c9a27f0d, type: 3}

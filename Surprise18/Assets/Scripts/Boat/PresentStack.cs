@@ -10,6 +10,9 @@ public class PresentStack : MonoBehaviour
 	public event VoidEvent OnExploded;
 
 	[SerializeField]
+	AudioClip clip_Explode;
+
+	[SerializeField]
 	private Transform explosionPoint;
 
 	[SerializeField]
@@ -21,6 +24,8 @@ public class PresentStack : MonoBehaviour
 
 	public void Explode()
 	{
+		AudioSource.PlayClipAtPoint(this.clip_Explode, Camera.main.transform.position, 1f);
+
 		Rigidbody[] rbs = GetComponentsInChildren<Rigidbody>();
 		foreach (Rigidbody r in rbs)
 		{

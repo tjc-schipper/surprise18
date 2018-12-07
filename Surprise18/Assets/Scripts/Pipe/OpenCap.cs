@@ -7,6 +7,10 @@ public class OpenCap : MonoBehaviour
 {
 
 	[SerializeField]
+	AudioClip clip_Squeak;
+
+
+	[SerializeField]
 	ParticleSystem bigParticles;
 
 	[SerializeField]
@@ -42,6 +46,7 @@ public class OpenCap : MonoBehaviour
 		DG.Tweening.DOVirtual.DelayedCall(2.5f, () =>
 		{
 			this.bigParticles.Play();
+			AudioSource.PlayClipAtPoint(this.clip_Squeak, Camera.main.transform.position, 1f);
 			this.hiddenPresent.SetActive(true);
 		});
 	}

@@ -6,6 +6,11 @@ using UnityEngine;
 public class Pipes : MonoBehaviour
 {
 
+	[SerializeField]
+	AudioClip clip_Pipefall;
+
+	[SerializeField]
+	AudioClip clip_PipeJiggle;
 
 	[SerializeField]
 	private PathDraggable draggablePipe;
@@ -26,7 +31,8 @@ public class Pipes : MonoBehaviour
 	public void DoUnlock()
 	{
 		this.animator.SetBool("b_Loose", true);
-
+		AudioSource.PlayClipAtPoint(this.clip_Pipefall, Camera.main.transform.position, 1f);
+		
 		DG.Tweening.DOVirtual.DelayedCall(1.55f, () =>
 		{
 			this.draggablePipe.gameObject.SetActive(true);
@@ -38,6 +44,7 @@ public class Pipes : MonoBehaviour
 
 	public void DoJiggle()
 	{
+		AudioSource.PlayClipAtPoint(this.clip_PipeJiggle, Camera.main.transform.position, 1f);
 		this.animator.SetTrigger("t_Jiggle");
 	}
 }

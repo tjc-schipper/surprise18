@@ -6,6 +6,9 @@ using UnityEngine;
 public class UndoScrew : MonoBehaviour
 {
 
+	[SerializeField]
+	AudioClip clip_Screw;
+
 	public UnityEngine.Events.UnityEvent OnScrewUndone;
 
 	private Animator animator;
@@ -20,6 +23,7 @@ public class UndoScrew : MonoBehaviour
 		this.animator.SetBool("b_Undone", true);
 		DG.Tweening.DOVirtual.DelayedCall(1f, () =>
 		{
+			AudioSource.PlayClipAtPoint(this.clip_Screw, Camera.main.transform.position, 1f);
 			if (this.OnScrewUndone != null)
 				this.OnScrewUndone.Invoke();
 		});

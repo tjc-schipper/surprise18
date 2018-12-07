@@ -7,6 +7,9 @@ public class JiggleDoor : MonoBehaviour
 {
 
 	[SerializeField]
+	AudioClip clip_Jiggle;
+
+	[SerializeField]
 	Clickable clickable;
 
 	private Animator animator;
@@ -20,6 +23,7 @@ public class JiggleDoor : MonoBehaviour
 
 	private void Clickable_Click(Clickable sender, UnityEngine.EventSystems.PointerEventData e)
 	{
+		AudioSource.PlayClipAtPoint(this.clip_Jiggle, Camera.main.transform.position, 1f);
 		this.animator.SetTrigger("t_Jiggle");
 	}
 
