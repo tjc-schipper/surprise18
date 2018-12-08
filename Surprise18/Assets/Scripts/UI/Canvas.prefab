@@ -366,10 +366,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Beste Liesbeth
-
-
-    Sint en Piet zaten te denken, wat ze jou nog toch zouden schenken?'
+  m_Text: "~\nNiet alleen belading is voor\n'n schip als pb12 integraal.\nOok uitlijning
+    en doorstroom van onder \nnaar boven zijn cruciaal.\n~"
 --- !u!114 &114242560083753768
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -552,10 +550,17 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Beste Liesbeth
+  m_Text: '~
 
+    Sint was weer veel te gul
 
-    Sint en Piet zaten te denken, wat ze jou nog toch zouden schenken?'
+    Voor de overtocht dit jaar.
+
+    Daardoor is onvoorzien
+
+    Pakjesboot 12 flink te zwaar!
+
+    ~'
 --- !u!114 &114719737193978042
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -588,10 +593,17 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Beste Liesbeth
+  m_Text: '~
 
+    Die zat warempel flink verstopt
 
-    Sint en Piet zaten te denken, wat ze jou nog toch zouden schenken?'
+    Maar goed gevonden, zeker niet traag!
+
+    Als extra uitdaging van de Sint,
+
+    Toch nog een derde, laatste vraag.
+
+    ~'
 --- !u!114 &114754398957384018
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -654,7 +666,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 29597c6f90b38e141a49aeb72ba2f589, type: 3}
-    m_FontSize: 36
+    m_FontSize: 32
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 3
@@ -665,10 +677,34 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Beste Liesbeth
+  m_Text: 'Beste Liesbeth,
 
 
-    Sint en Piet zaten te denken, wat ze jou nog toch zouden schenken?'
+    Jij houdt van raadsels, enigma''s
+
+    Dit is de Sint al lang bekend.
+
+    Nu zelfs op je last-minute lijstje
+
+    nog meer oefening voor je talent.
+
+
+    Cryptische whatsapps, thrillerseries,
+
+    en escaperoom na -room met familie,
+
+    Daarom heeft de Sint voor jou
+
+    dit jaar een waar mysterie.
+
+
+    Hij geeft je dit jaar je kado verpakt
+
+    in een tweetal puzzels, Sherlock waardig.
+
+    Voor elke puzzel is er ''n kleine hint.
+
+    Dat vond hij wel zo aardig.'
 --- !u!114 &114957532341576802
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -701,10 +737,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Beste Liesbeth
-
-
-    Sint en Piet zaten te denken, wat ze jou nog toch zouden schenken?'
+  m_Text: Je kado ligt waar ......
 --- !u!114 &114976618353232164
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -843,7 +876,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -256, y: -256}
+  m_SizeDelta: {x: -256, y: -72}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224135848569245844
 RectTransform:
